@@ -1,0 +1,23 @@
+{
+  "containerDefinitions": [
+    {
+      "portMappings": [
+        {
+          "hostPort": 0,
+          "protocol": "tcp",
+          "containerPort": 8080
+        }
+      ],
+
+      "cpu": 2,
+      "memory": 256,
+      "image": "662738233441.dkr.ecr.us-east-2.amazonaws.com/cicd_poc:%tag_version%",
+      "dockerLabels": {
+        "Name": "cicd"
+      },
+      "name": "cicd"
+    }
+  ],
+  "family": "cicd_test",
+  "networkMode": "bridge"
+}
